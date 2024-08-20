@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   validation.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 11:47:32 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 20:54:31 by yoshin           ###   ########.fr       */
+/*   Created: 2024/08/20 16:31:33 by yoshin            #+#    #+#             */
+/*   Updated: 2024/08/20 20:41:23 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
+#ifndef VALIDATION_H
+# define VALIDATION_H
+# include "ft_atoi.h"
 
-int	main(int argc, char **argv)
-{
-	unsigned int	size;
-	unsigned int	**map;
-
-	if (!is_valid_args(argc, argv))
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	size = (argc - 1) / 4;
-	map = initialize_map(argv, size);
-	if (find_solution(map, size))
-		print_map(map, size);
-	else
-		write(1, "Error\n", 6);
-	finalize_map(map, size);
-	return (0);
-}
+int	is_valid_args(int argc, char **argv);
+int	is_valid_map(unsigned int **map, unsigned int size);
+int	is_valid_row(unsigned int **map, unsigned int size, unsigned int row);
+int	is_valid_col(unsigned int **map, unsigned int size, unsigned int col);
+#endif

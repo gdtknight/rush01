@@ -6,46 +6,43 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:07:33 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 15:57:16 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/20 20:54:03 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "map.h"
 
-int		**initialize_map(int argc, char **argv, unsigned int size);
-void	fill_map(int **map, unsigned int size, char **argv);
-void	finalize_map(int **map, unsigned int size);
-int		ft_atoi(char *str);
-
-int		**initialize_map(int argc, char **argv, unsigned int size)
+unsigned int	**initialize_map(char **argv, unsigned int size)
 {
-	int	row;
-	int	**map;
+	unsigned int	row;
+	unsigned int	**map;
 
-	map = (int	**)malloc(sizeof(int *) * (size + 2));
+	map = (unsigned int **)malloc(sizeof(unsigned int *) * (size + 2));
 	row = 0;
-
 	while (row++ < size)
-		*(map + row) = (int *)malloc(sizeof(int) * (size + 2));
-
+		*(map + row) = (unsigned int *)malloc(sizeof(unsigned int) * (size + 2));
 	fill_map(map, size, argv);
-
 	return (map);
 }
 
-void	fill_map(int **map, unsigned int size, char **argv)
+void	fill_map(unsigned int **map, unsigned int size, char **argv)
 {
-	int	row;
-	int	col;
+	unsigned int	row;
+	unsigned int	col;
 
+	row = -1;
+	while (++row < size + 2)
+	{
+		col = -1;
+		while (++col < size + 2)
+			map[row][col] = 0;
+	}
 	col = 0;
 	while (++col <= size)
 	{
 		map[0][col] = ft_atoi(argv[col]);
 		map[size + 1][col] = ft_atoi(argv[col + size]);
 	}
-
 	row = 0;
 	while (++row <= size)
 	{
@@ -54,9 +51,9 @@ void	fill_map(int **map, unsigned int size, char **argv)
 	}
 }
 
-void	finalize_map(int **map, unsigned int size)
+void	finalize_map(unsigned int **map, unsigned int size)
 {
-	int row;
+	unsigned int	row;
 
 	row = -1;
 	while (++row < size + 2)
@@ -64,10 +61,10 @@ void	finalize_map(int **map, unsigned int size)
 	free (map);
 }
 
-void	print_map(int **map, int size)
+void	print_map(unsigned int **map, unsigned int size)
 {
-	int	row;
-	int	col;
+	unsigned int	row;
+	unsigned int	col;
 
 	row = 0;
 	col = 0;

@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 11:47:32 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 20:54:31 by yoshin           ###   ########.fr       */
+/*   Created: 2024/08/20 16:26:57 by yoshin            #+#    #+#             */
+/*   Updated: 2024/08/20 20:42:49 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
+#ifndef FT_ATOI_H
+# define FT_ATOI_H
 
-int	main(int argc, char **argv)
-{
-	unsigned int	size;
-	unsigned int	**map;
-
-	if (!is_valid_args(argc, argv))
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	size = (argc - 1) / 4;
-	map = initialize_map(argv, size);
-	if (find_solution(map, size))
-		print_map(map, size);
-	else
-		write(1, "Error\n", 6);
-	finalize_map(map, size);
-	return (0);
-}
+int	ft_atoi(char *str);
+int	__is_space__(char c);
+int	__is_numeric__(char c);
+#endif

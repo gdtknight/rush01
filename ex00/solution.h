@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.h                                           :+:      :+:    :+:   */
+/*   solution.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 14:57:04 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 14:57:06 by yoshin           ###   ########.fr       */
+/*   Created: 2024/08/20 16:31:51 by yoshin            #+#    #+#             */
+/*   Updated: 2024/08/20 20:40:49 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef SOLUTION_H
+# define  SOLUTION_H
+# include "validation.h"
 
-#ifndef __RUSH_01__
-	#define __RUSH_01__
-	#include <unistd.h>
-	#include <stdlib.h>
-	#define __ERROR__ write(1, "Error\n", 6)
+int	__recursive__(
+		unsigned int **map,
+		unsigned int size,
+		unsigned int f_count);
+int	find_solution(unsigned int **map, unsigned int size);
 #endif

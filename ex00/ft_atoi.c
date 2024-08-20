@@ -6,12 +6,11 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:38:30 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 15:38:32 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/20 16:27:48 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	__is_space__(char c);
-int	__is_numeric__(char c);
+#include "ft_atoi.h"
 
 int	ft_atoi(char *str)
 {
