@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:57:41 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 08:37:17 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 08:40:51 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,12 +116,7 @@ int	__recursive__(unsigned int **map, unsigned int size, unsigned int f_count)
 	unsigned int	col;
 
 	if (f_count == (size * size))
-	{
-		if (is_valid_map(map, size))
-			return (1);
-		else
-			return (0);
-	}
+		return (1);
 
 	/* Debug */
 	write(1, "\n===== Recursive ", 17);
