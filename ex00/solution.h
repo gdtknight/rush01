@@ -6,11 +6,12 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:31:51 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 20:40:49 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/20 22:47:05 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef SOLUTION_H
 # define  SOLUTION_H
+# include "utils.h"
 # include "validation.h"
 
 int	__recursive__(

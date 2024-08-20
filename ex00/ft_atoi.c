@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:38:30 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 16:27:48 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/20 22:50:42 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,33 +35,4 @@ int	ft_atoi(char *str)
 	if (flag)
 		result *= (-1);
 	return (result);
-}
-
-/*
- * checks for white-space characters.
- * In the "C" and "POSIX" locales, these are
- *  - space
- *  - form-feed ('\f')
- *  - newline ('\n')
- *  - carriage return ('\r')
- *  - horizontal tab ('\t')
- *  - vertical tab ('\v').
- */
-int	__is_space__(char c)
-{
-	if ((c == ' ')
-		|| (c == '\f')
-		|| (c == '\n')
-		|| (c == '\r')
-		|| (c == '\t')
-		|| (c == '\v'))
-		return (1);
-	return (0);
-}
-
-int	__is_numeric__(char c)
-{
-	if ('0' <= c && c <= '9')
-		return (1);
-	return (0);
 }
