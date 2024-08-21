@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:47:32 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 21:50:30 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 23:04:34 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int	main(int argc, char *argv[])
 	else
 		write(1, "Error\n", 6);
 	finalize_map(map, size);
+	free(pargv);
 	return (0);
 }

@@ -6,13 +6,12 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:28:15 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 21:50:15 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 23:03:44 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAP_H
 # define MAP_H
-# include "ft_atoi.h"
 # include "utils.h"
 
 unsigned int	**initialize_map(
