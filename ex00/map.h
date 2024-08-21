@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:28:15 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 20:08:43 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:50:15 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include "ft_atoi.h"
 # include "utils.h"
 
-// unsigned int	**initialize_map(char **argv, unsigned int size);
-// void			fill_map(unsigned int **map, unsigned int size, char **argv);
 unsigned int	**initialize_map(
 					char *argv,
 					unsigned int size);

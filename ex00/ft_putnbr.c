@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 18:14:08 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 23:21:19 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:51:15 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_putnbr(int nb)
 	char			buf[12];
 	unsigned int	offset;
 
-	offset = __convert_nb_to_str__(buf, nb);
-	__putnbr__(buf, offset);
+	offset = convert_nb_to_str(buf, nb);
+	putnbr(buf, offset);
 }
 
-unsigned int	__convert_nb_to_str__(char *buf, int nb)
+unsigned int	convert_nb_to_str(char *buf, int nb)
 {
 	unsigned int	offset;
 	int				flag;
@@ -45,11 +45,11 @@ unsigned int	__convert_nb_to_str__(char *buf, int nb)
 		nb /= 10;
 	}
 	if (flag)
-		offset = __carry__(buf, offset);
+		offset = carry(buf, offset);
 	return (offset);
 }
 
-unsigned int	__carry__(char *buf, unsigned int offset)
+unsigned int	carry(char *buf, unsigned int offset)
 {
 	unsigned int	cur;
 	int				num;
@@ -69,7 +69,7 @@ unsigned int	__carry__(char *buf, unsigned int offset)
 	return (offset);
 }
 
-void	__putnbr__(char *nbr, unsigned int offset)
+void	putnbr(char *nbr, unsigned int offset)
 {
 	while (offset--)
 		write(1, &nbr[offset], 1);

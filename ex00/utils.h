@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 22:47:40 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 23:23:10 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:49:08 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int	__is_space__(char c);
-int	__is_numeric__(char c);
+int	is_space(char c);
+int	is_numeric(char c);
 #endif

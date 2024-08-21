@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 22:47:56 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 22:48:35 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:49:22 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  *  - horizontal tab ('\t')
  *  - vertical tab ('\v').
  */
-int	__is_space__(char c)
+int	is_space(char c)
 {
 	if ((c == ' ')
 		|| (c == '\f')
@@ -34,7 +34,7 @@ int	__is_space__(char c)
 	return (0);
 }
 
-int	__is_numeric__(char c)
+int	is_numeric(char c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);

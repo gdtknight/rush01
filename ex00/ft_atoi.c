@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:38:30 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 22:50:42 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:51:27 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(char *str)
 
 	result = 0;
 	flag = 0;
-	while (__is_space__(*str))
+	while (is_space(*str))
 		str++;
 	while (*str == '+' || *str == '-')
 	{
@@ -27,7 +27,7 @@ int	ft_atoi(char *str)
 			flag = !flag;
 		str++;
 	}
-	while (__is_numeric__(*str))
+	while (is_numeric(*str))
 	{
 		result *= 10;
 		result += (*str++ - '0');
