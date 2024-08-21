@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
+/*   By: subjeong <subjeong@student.42gyeongsa      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:30:45 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 20:19:50 by yoshin           ###   ########.fr       */
+/*   Created: 2024/08/21 07:25:48 by subjeong          #+#    #+#             */
+/*   Updated: 2024/08/21 19:45:17 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
-# include "map.h"
-# include "solution.h"
-# include "validation_args.h"
-# include "validation_row.h"
-# include "validation_col.h"
+#ifndef PARSING_H
+# define PARSING_H
 # include "utils.h"
-# include "parsing.h"
 
-int	main(int argc, char **argv);
+char	*parse_args(char *argv, unsigned int size);
 #endif

@@ -6,14 +6,14 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:07:33 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/20 23:39:55 by yoshin           ###   ########.fr       */
+/*   Updated: 2024/08/21 20:22:24 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "map.h"
 #include "ft_putnbr.h"
 
-unsigned int	**initialize_map(char **argv, unsigned int size)
+unsigned int	**initialize_map(char *argv, unsigned int size)
 {
 	unsigned int	row;
 	unsigned int	**map;
@@ -21,12 +21,13 @@ unsigned int	**initialize_map(char **argv, unsigned int size)
 	map = (unsigned int **)malloc(sizeof(unsigned int *) * (size + 2));
 	row = -1;
 	while (++row < size + 2)
-		*(map + row) = (unsigned int *)malloc(sizeof(unsigned int) * (size + 2));
+		*(map + row) = \
+			(unsigned int *)malloc(sizeof(unsigned int) * (size + 2));
 	fill_map(map, size, argv);
 	return (map);
 }
 
-void	fill_map(unsigned int **map, unsigned int size, char **argv)
+void	fill_map(unsigned int **map, unsigned int size, char *argv)
 {
 	unsigned int	row;
 	unsigned int	col;
@@ -41,14 +42,14 @@ void	fill_map(unsigned int **map, unsigned int size, char **argv)
 	col = 0;
 	while (++col <= size)
 	{
-		map[0][col] = ft_atoi(argv[col]);
-		map[size + 1][col] = ft_atoi(argv[col + size]);
+		map[0][col] = argv[col - 1] - '0';
+		map[size + 1][col] = argv[col + size - 1] - '0';
 	}
 	row = 0;
 	while (++row <= size)
 	{
-		map[row][0] = ft_atoi(argv[row + size * 2]);
-		map[row][size + 1] = ft_atoi(argv[row + size * 3]);
+		map[row][0] = argv[row + size * 2 - 1] - '0';
+		map[row][size + 1] = argv[row + size * 3 - 1] - '0';
 	}
 }
 
@@ -79,7 +80,6 @@ void	print_map(unsigned int **map, unsigned int size)
 		}
 		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 }
 
 void	print_all_map(unsigned int **map, unsigned int size)

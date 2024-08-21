@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   pre_fill.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:30:45 by yoshin            #+#    #+#             */
-/*   Updated: 2024/08/21 20:19:50 by yoshin           ###   ########.fr       */
+/*   Created: 2024/08/21 21:11:44 by yoshin            #+#    #+#             */
+/*   Updated: 2024/08/21 21:24:16 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
-# include "map.h"
-# include "solution.h"
-# include "validation_args.h"
-# include "validation_row.h"
-# include "validation_col.h"
-# include "utils.h"
-# include "parsing.h"
+#ifndef PRE_FILL_H
+# define PRE_FILL_H
 
-int	main(int argc, char **argv);
+void	fill_highest_row(unsigned int **map, unsigned int size);
+void	fill_highest_col(unsigned int **map, unsigned int size);
+void	fill_first_highest_box(unsigned int **map, unsigned int size);
+void	fill_ordered_row(unsigned int **map, unsigned int size);
+void	fill_ordered_col(unsigned int **map, unsigned int size);
 #endif
